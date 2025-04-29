@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Mobile Store</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#" onclick="toggleCart()">🛒 Cart (<span id="cartCount">0</span>)</a> 
+            <!-- See (0) inside cart icon -->
+        </nav>
+    </header>
+
+    <section class="landing">
+        <img src="b1.jpg" alt="Mobile Store Landing" class="landing-image">
+        <div class="landing-text">
+            <h2>Welcome to Mobile Store</h2>
+            <p>Find your perfect mobile, New or Old - Best Deals Guaranteed!</p>
+            <a href="#new-mobiles" class="btn-shop">Shop Now</a>
+        </div>
+    </section>
+    
+    
+
+    <section class="products">
+        <h2>New Mobiles</h2>
+        <div class="product-list" id="new-mobiles">
+            <!-- New Mobile Cards Here -->
+        </div>
+
+        <h2>Old Mobiles</h2>
+        <div class="product-list" id="old-mobiles">
+            <!-- Old Mobile Cards Here -->
+        </div>
+    </section>
+    
+
+    <div id="cart" class="cart">
+    <h2 class="cart-title">🛒 Your Cart</h2>
+
+    <ul id="cartItems" class="cart-items-list">
+        <!-- Cart Items will be added here -->
+    </ul>
+
+    <div id="totalPrice" class="cart-total">
+        <h3>Total: $0</h3>
+    </div>
+
+    <!-- Proceed to Checkout Button -->
+    <div class="cart-buttons">
+        <button class="checkout-open-btn" onclick="openCheckoutForm()">🛒 Proceed to Checkout</button>
+    </div>
+
+    <!-- Checkout Form (Hidden initially) -->
+    <div class="checkout-container" id="checkoutContainer" style="display: none;">
+        <div class="form-header">
+            <h3>Fill Details</h3>
+            <span class="close-icon" onclick="cancelCheckout()">❌</span>
+        </div>
+
+        <form id="checkout-form">
+            <div class="form-group">
+                <label for="name">Name :</label>
+                <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" id="email" placeholder="Your Email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="orderDetails">Product Name :</label>
+                <input type="text" id="orderDetails" placeholder="Order Details" required>
+            </div>
+
+            <div class="confirm-button-container">
+                <button type="submit" class="confirm-order-btn">✅ Confirm Order</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Clear Cart Button -->
+    <div class="cart-buttons">
+        <button class="clear-cart-btn" onclick="clearCart()">🗑️ Clear Cart</button>
+    </div>
+</div>
+    
+    <footer>
+        © 2025 Mobile Store. All Rights Reserved.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
