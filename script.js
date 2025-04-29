@@ -128,7 +128,7 @@ document.getElementById("checkout-form").addEventListener("submit", function(e) 
       orderDetails: document.getElementById("orderDetails").value
     };
    
-    fetch("http://localhost:3000/send-email", {
+    fetch("https://backend-website-22y9.onrender.com/send-email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
